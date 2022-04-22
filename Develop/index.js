@@ -1,7 +1,22 @@
-// TODO: Include packages needed for this application
+const inquirer = require ('inquirer')
 
 // TODO: Create an array of questions for user input
-const questions = [];
+inquirer
+    .prompt([
+        {
+            type: 'input',
+            name: 'title',
+            message: 'What is your project title? (Required) ',
+            validate:  titleInput => {
+                if(titleInput) {
+                   return true; 
+                } else{ 
+                    console.log ('Please enter yout project title!')
+                }
+
+            }
+        }
+    ]);
 
 // TODO: Create a function to write README file
 function writeToFile(fileName, data) {}
