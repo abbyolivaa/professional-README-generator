@@ -53,3 +53,25 @@ const createLicenseBadge = license => {
             return '';
     }
 };
+
+//Main Function
+const createReadme = data => {
+    const sections = [];
+    const contents = ['Installation', 'Usage', 'How to Contribute', 'Tests'];
+    const usedContents = [];
+  
+    //Add Title and license
+    const title = createTitle(data.title, data.license);
+  
+    //Add Description
+    const desc = createSection('Description', data.description);
+  
+    //Add Sections
+    contents.forEach(element => {
+        if(data[element].toLowerCase() != '!del') {
+            sections.push(createSection(element, data[element]));
+            usedContents.push(element);
+        }
+    });
+}
+  
