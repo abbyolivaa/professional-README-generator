@@ -73,5 +73,21 @@ const createReadme = data => {
             usedContents.push(element);
         }
     });
-}
+
+    //create Questions
+    sections.push(createQuestions(data.github, data.email));
+    usedContents.push('Questions');
+
+    //create license Section
+    sections.push(createSection('License', data.license))
+    usedContents.push('License');
+
+    //Add Table of Contents
+    const tableCont = createTableCont(usedContents);
+
+    const final = title + desc + tableCont + sections.join('');
+    return final;
+};
+
+module.exports = createReadme;
   
