@@ -1,8 +1,8 @@
 const inquirer = require ('inquirer');
 const fs = require('fs');
 
-const createReadme = require('./utils/generateReadme.js')
-const createLicense = require('./utils/generateLicense.js')
+const generateMarkdown = require('./utils/generateMarkdown.js')
+
 
 //wreite instructions
 const instructions = () => {
@@ -42,7 +42,7 @@ const questions = [
     },
     {
         type: 'input',
-        name: 'instructions', 
+        name: 'installation', 
         message: 'How do you install your project? Enter your installation instructions.'
     },
     {
@@ -108,29 +108,6 @@ const questions = [
     },
 ];
 
-function newFile(){
-console.log(
-    `
-    All done! Find your README file in the 'dist' folder.
-    `
-)
-}   
-
-// TODO: Create a function to write README file
-function writeReadme(fileName, data) {
-    const text = createReadme(data);
-};
-
-// write license
-const writeLicense = async(fileName, data) => {
-    const text = await createLicense(data.license);
-
-    fs.writeFile(fileName, text.data.body, (err) => 
-        err ? console.error(err) : 
-        console.log('License created')
-    );
-};
-
 // TODO: Create a function to initialize app
 function init() {
 
@@ -141,24 +118,12 @@ function init() {
         folder = './' + process.argv[2];
     }
 
-    if(!fs.existsSync(folder)) {
-        fs.mkdir(folder,(err) => {
-            if(err) {
-                console.log('Failed to create folder');
-                return;
-            };
-        });
-    }
+    inquirer.prompt(questions).then((data) => {
+        console.log(data)
+        fs.writeFile('dist/GeneratedREADME.md', generateMarkdown(data), (err) => err? console.error(err):
+        console.log("Success!"))
+    })
 
-    inquirer.prompt(questions).then(response => {
-        //write readme file
-        writeReadme(folder + '/README.md', response);
-
-        //if user requested
-        if(response.licenseDoc === 'Yes') {
-            writeLicense(folder + 'LICENSE.md', response);
-        }
-    });
     
 }
 
