@@ -7,34 +7,45 @@ function generateMarkdown(data) {
     }
   
       
-    return `# Table of Contents\n
-    1. [Title](#Title)\n
-    2. [Description](#Description)\n
-    3. [Installation](#Installation Instructions)\n
-    4. [Usage](#Usage Instructions)\n
-    5. [Contribution](#Contribution Instructions)\n
-    6. [Test](#Test Instructions)\n
-    7. [Username](#Github Username)\n
-    8. [Email](#Email)\n
-    9. [License](#Licenses)\n
+    return `  # **${data.title}**\n 
+
+# Table of Contents\n
+1. [Title](#Title)\n
+
+2. [Description](#Description)\n
+
+3. [Installation Instructions](#Installation-Instructions)\n
+
+4. [Usage Instructions](#Usage-Instructions)\n
+
+5. [Contribution Instructions](#Contribution-Instructions)\n
+
+6. [Test Instructions](#Test-Instructions)\n
+
+7. [Github Username](#Github-Username)\n
+
+8. [Email](#Email)\n
+
+9. [Licenses](#Licenses)\n
+
     
-  #${data.title}\n\n
   # Description
-  ${data.description}\n\n
+  ${data.description}\n
+
   # Installation Instructions
-  ${data.installation}\n\n
+  ${data.installation}\n
   # Usage Instructions
-  ${data.usage}\n\n
+  ${data.usage}\n
   # Contribution Instructions
-  ${data.contribution}\n\n
+  ${data.contribution}\n
   # Test Instructions
-  ${data.test}\n\n
+  ${data.test}\n
   # Github Username
-  ${data.username}\n\n
+  ${data.username}\n
   # Email
-  ${data.email}\n\n
+  ${data.email}\n
   # Licenses
-  ${data.license}\n\n
+  ${data.license}\n
     `;
 }
     
