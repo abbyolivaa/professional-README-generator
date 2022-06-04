@@ -14,4 +14,14 @@ Users can use this application to generate README.md files for any project.
 
 * Follow the instructions in the terminal
 
-[How to create a Professional README](https://coding-boot-camp.github.io/full-stack/github/professional-readme-guide)
+## Technologies Used
+* HTML
+* CSS
+* Javascript
+
+* Node.js
+- fs
+- inquirer
+
+## Walkthrough Video
+https://drive.google.com/file/d/1QlUQTtc94W9eZY8-M6wdqXHgeXxuje8m/view
