@@ -14,7 +14,11 @@ const instructions = () => {
         Instructions: \n
         - Answer each question with the information requested 
         - (MUST answer *required* questions)\n
-        - 
+        - If you make an error and can't go back to fix it, don't worry! \n
+         Just exit out of the project with Ctrl + C (or Command + C for Mac users) \n
+        - Once you are satisfied with the criteria you entered in the generator and complated all the questions, \n
+         there will be a prompt telling you were to find your new file!\n
+        - PS: you can always edit your README.md after it is created\n
         - Have fun :)
         `)
 }
@@ -121,7 +125,7 @@ function init() {
     inquirer.prompt(questions).then((data) => {
         console.log(data)
         fs.writeFile('dist/GeneratedREADME.md', generateMarkdown(data), (err) => err? console.error(err):
-        console.log("Success!"))
+        console.log("Success! Your Generated README.md will be in the 'dist' folder in the project root :)"))
     })
 
     
