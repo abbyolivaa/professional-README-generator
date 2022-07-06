@@ -1,4 +1,4 @@
-  # **Demo README**
+  # **Ecommerce backend**
  
 
 # Table of Contents
@@ -15,45 +15,20 @@
 4. [Usage Instructions](#Usage-Instructions)
 
 
-5. [Contribution Instructions](#Contribution-Instructions)
+5. [Github Username](#Github-Username)
 
-
-6. [Test Instructions](#Test-Instructions)
-
-
-7. [Github Username](#Github-Username)
-
-
-8. [Email](#Email)
-
-
-9. [Licenses](#Licenses)
-
-
-    
   # Description
-  this is a demo
+  This application holds the backend code for a website that holds all the data for an ecommerce company. This company will be more organized than its competitors using all of the latest technologies. 
 
 
   # Installation Instructions
-  Installation instructions
+  To install this application, clone this repository onto your desktop. Once you are in the project's terminal you can command "npm seed" if you want the demo data. Then command "npm start" to start the application.
 
   # Usage Instructions
-  Usage instructions
-
-  # Contribution Instructions
-  Enter Contribution instructions
-
-  # Test Instructions
-  Test instructions
+  To check that the data is organized and the routes are functioning, use a debugging application like Insomnia. Watch this [video](#https://drive.google.com/file/d/1_PrWdMTEN-CTnzv_wlcAbLYl81dxM8VU/view) for a usage demo.
 
   # Github Username
   abbyolivaa
 
-  # Email
-  abbyolivaa@email.com
-
-  # Licenses
-  MPL 2.0
 
     
